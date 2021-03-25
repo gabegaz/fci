@@ -1,0 +1,4 @@
+static/
+staticfiles/
+finance/__pycache__/
+analytics/__pycache__/

@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>
+  Data Analytics 
+  </title>
+
+<!-- Custom fonts for this template-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'footer.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'notification.css' %}">
+
+
+
+
+</head>
+
+<body>
+
+
+<!--py-0-->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light py-0" style="background-color: #e3f2fd;">
+
+  <a class="navbar-brand font-weight-bold" href="{% url 'dashboard' %}">Dashboard</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item dropdown font-weight-bold">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Monetary
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'money_supply' %}">Money supply</a>
+          <a class="dropdown-item" href="{% url 'domestic_credit' %}">Domestic credit</a>
+          <a class="dropdown-item" href="#">Reserves</a>
+          <a class="dropdown-item" href="{% url 'forex_holding' %}">Forex holding</a>
+
+        </div>
+
+      </li>
+
+      <li class="nav-item dropdown font-weight-bold">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Banks
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Unemployment rate</a>
+          <a class="dropdown-item" href="#">Number of people employed</a>
+        </div>
+      </li>
+
+     
+      <li class="nav-item dropdown font-weight-bold">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Insurances
+        </a>
+
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Balance of payments</a>
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="#">Exports by commodity</a>
+          <a class="dropdown-item" href="#">Exports by destination</a>
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="#">Imports by commodity</a>
+          <a class="dropdown-item" href="#">Imports by end use</a>
+          <a class="dropdown-item" href="#">Imports by origin</a>
+          <div class="dropdown-divider"></div>
+
+        </div>
+      </li>
+
+      <li class="nav-item dropdown font-weight-bold">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MFIs
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Population by region</a>
+        </div>
+      </li>
+
+
+      <li class="nav-item dropdown font-weight-bold">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Financial markets
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Poverty head count</a>
+          <a class="dropdown-item" href="#">Poverty gap</a>
+          <a class="dropdown-item" href="#">Poverty Severity</a>
+
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Inequality-Gini Coefficient</a>
+        </div>
+      </li>
+
+       <li class="nav-item dropdown font-weight-bold">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Price level and inflation
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">CPI Annual</a>
+          <a class="dropdown-item" href="#">CPI Monthly</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Annual Inflation</a>
+          <a class="dropdown-item" href="#">Monthly Inflation</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown font-weight-bold">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Rates
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Capital expenditure</a>
+          <a class="dropdown-item" href="#">Recurrent expenditure</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Tax revenue</a>
+          <a class="dropdown-item" href="#">Non-tax revenue</a>
+        </div>
+      </li>
+
+
+    </ul>
+
+
+  </div>
+
+</nav>
+
+  {% block content %}
+     
+  {% endblock %}
+ 
+
+<div class="container-fluid footer_dashboard">
+  <div class="row">
+       
+    <div class="col-6">
+        <a href="{% url 'dashboard' %}"> <i class="fa fa-tachometer fa-lg py-3 py-sm-3 py-md-3 py-lg-3" aria-hidden="true"></i></a>
+    </div>
+    
+    <div class="col-6">   
+         <a href=""> <i class="fa fa-refresh fa-lg py-3 py-sm-3 py-md-3 py-lg-3" aria-hidden="true"></i></a>
+    </div>
+                    
+  </div>
+</div> 
+
+
+  <!-- Bootstrap core JavaScript-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
