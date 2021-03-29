@@ -9,13 +9,13 @@ import plotly.express as px
 from dash.dependencies import Input, Output, State
 from django_plotly_dash import DjangoDash
 
-app = DjangoDash('ForexHolding', add_bootstrap_links=True, 
+app = DjangoDash('GoldForexHolding', add_bootstrap_links=True, 
   suppress_callback_exceptions=True, 
   external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-data = 'D:/projects/World_Bank_FCI/data/'
-df   =  pd.read_excel(data+'monetary_aggregates_dash.xlsx',
-        sheet_name='gold_and_forex_holding_analysis')
+data = 'D:/projects/World_Bank_FCI/data/money_supply/'
+df   =  pd.read_excel(data+'gold_forex_holding.xlsx',
+        sheet_name='gold_forex_holding_long')
 
 categories = df['Forex holding'].unique()
 
@@ -155,7 +155,7 @@ def levels(forex_holding):
     fig = px.line(dff, x= 'year',
                   y = 'levels',
                   color='Forex holding',
-                  title = "Net Forex Holding for the Year Ending July (Billions of Birr)",
+                  title = "GF #1: Net Forex Holding for the Year Ending July (Billions of Birr)",
                   labels={
                      "year": "Time in year",
                      "levels": "Value (Billions of Birr)",
@@ -174,7 +174,7 @@ def growth(forex_holding):
     fig = px.line(dff, x= 'year',
                   y = 'growth',
                   color='Forex holding',
-                  title = "Growth Rates (Percent) in Net Forex Holding",
+                  title = "GF #2: Growth Rates in Net Forex Holding for the Year Ending July (Percent)",
                   labels={
                      "year": "Time in year",
                      "growth": "Growth rate (percent)",
@@ -192,7 +192,7 @@ def share(forex_holding):
     fig = px.line(dff, x= 'year',
                   y = 'share',
                   color='Forex holding',
-                  title = "Share (Percent) of  Net Forex Holding", 
+                  title = "GF #3: Share of Net Forex Holding for the Year Ending July (Percent)",
                   labels={
                      "year": "Time in year",
                      "share": "Share (percent)",
@@ -211,7 +211,7 @@ def share(forex_holding):
     fig = px.line(dff, x= 'year',
                   y = 'contribution',
                   color='Forex holding',
-                  title = "Conctribution (Percent) of Net Forex Holding", 
+                  title = "GF #4: Contribution to Growth of Net Forex Holding for the Year Ending July (Percent)",
                   labels={
                      "year": "Time in year",
                      "contribution": "Contribution (percent)",

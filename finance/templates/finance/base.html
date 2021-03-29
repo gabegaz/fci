@@ -23,11 +23,8 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 
-
 <link rel="stylesheet" type="text/css" href="{% static 'footer.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'notification.css' %}">
-
-
 
 
 </head>
@@ -48,14 +45,14 @@
 
       <li class="nav-item dropdown font-weight-bold">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Monetary
+           Money Supply
         </a>
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{% url 'money_supply' %}">Money supply</a>
           <a class="dropdown-item" href="{% url 'domestic_credit' %}">Domestic credit</a>
-          <a class="dropdown-item" href="#">Reserves</a>
-          <a class="dropdown-item" href="{% url 'forex_holding' %}">Forex holding</a>
+          <a class="dropdown-item" href="{% url 'reserve_money' %}">Reserve money</a>
+          <a class="dropdown-item" href="{% url 'gold_forex_holding' %}">Gold and forex holding</a>
 
         </div>
 
@@ -63,17 +60,28 @@
 
       <li class="nav-item dropdown font-weight-bold">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Banks
+          Financial Intermediation
         </a>
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Unemployment rate</a>
-          <a class="dropdown-item" href="#">Number of people employed</a>
+          <a class="dropdown-item" href="{% url 'loan_disbursement_banks' %}">Loan disbursement-banks</a>
+          <a class="dropdown-item" href="{% url 'loan_disbursement_client' %}">Loan disbursement-client</a>
+          <a class="dropdown-item" href="{% url 'loan_disbursement_sector' %}">Loan disbursement-sector</a>
+
+          <a class="dropdown-item" href="{% url 'loan_collection_banks' %}">Loan collection-banks</a>
+          <a class="dropdown-item" href="{% url 'loan_collection_client' %}">Loan collection-client</a>
+          <a class="dropdown-item" href="{% url 'loan_collection_sector' %}">Loan collection-sector</a>
+
+
+          <a class="dropdown-item" href="{% url 'loan_collection_sector' %}">Loan Outstanding-banks</a>
+          <a class="dropdown-item" href="{% url 'loan_outstanding_client' %}">Loan Outstanding-client</a>
+          <a class="dropdown-item" href="{% url 'loan_outstanding_sector' %}">Loan Outstanding-sector</a>
+          
         </div>
       </li>
 
      
-      <li class="nav-item dropdown font-weight-bold">
+      <!-- <li class="nav-item dropdown font-weight-bold">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Insurances
         </a>
@@ -149,7 +157,7 @@
           <a class="dropdown-item" href="#">Non-tax revenue</a>
         </div>
       </li>
-
+ -->
 
     </ul>
 

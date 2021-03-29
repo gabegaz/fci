@@ -12,9 +12,20 @@ import dash_table as dt
 
 app = DjangoDash('Dashboard', add_bootstrap_links=True, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
  
-app.layout = html.Div([
-	html.Br(),
-	html.Br(),
-	html.Center("Monitorying Ethiopian Financial Sector")
-	]
+
+
+
+body = dbc.Container([ 
+dbc.Row(
+            [
+            html.H5("Ethiopian financial sector monitoring ...")
+            ], justify="center", align="center", className="h-50"
+            )
+],style={"height": "40vh", "color": "green"}
+
 )
+
+
+app.layout = html.Div([body])
+
+
