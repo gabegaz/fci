@@ -51,4 +51,5 @@ urlpatterns =[
     path('loan_outstanding_banks', views.loan_outstanding_banks, name='loan_outstanding_banks'),
     path('loan_outstanding_client', views.loan_outstanding_client, name='loan_outstanding_client'),  
     path('loan_outstanding_sector', views.loan_outstanding_sector, name='loan_outstanding_sector'),
+
 ]

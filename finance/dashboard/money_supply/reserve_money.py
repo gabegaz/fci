@@ -1,4 +1,5 @@
-# Environment used: dash1_8_0_env
+# -*- coding: utf-8 -*-
+
 import pandas as pd     #(version 1.0.0)
 import plotly           #(version 4.5.0)
 import plotly.io as pio
@@ -53,76 +54,12 @@ height = 600
 width  = 700
 
 
-# #A more beautiful racing graph here: https://towardsdatascience.com/bar-chart-race-with-plotly-f36f3a5df4f1
-
-# dict_keys=['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen',
-#            'fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty','twentyone','twentytwo',
-#            'twentythree','twentyfour','twentyfive','twentysix','twentyseven','twentyeight', 'twentynine', 
-#            'thirty'] 
-
-
-# years=[1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 
-#        1990, 1991,1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
-#        2000, 2001, 2002,2003, 2004, 2005, 2006, 2007, 2008, 2009, 
-#        2010,2011]
-
-# n_frame={}
-
-# for y, d in zip(years, dict_keys):
-#     dataframe=df[(df['year']==y)&(df['indicator']=='sub_total')]
-#     dataframe=dataframe.nlargest(n=12,columns=['share'])
-#     dataframe=dataframe.sort_values(by=['year','share'])
-
-#     n_frame[d]=dataframe
-
-# fig=go.Figure(
-#     data=[
-#         go.Bar(
-#         x=n_frame['one']['share'], y=n_frame['one']['Sectors'],orientation='h',
-#         text=n_frame['one']['share'], texttemplate='%{text:.3s}',
-#         textfont={'size':18}, textposition='inside', insidetextanchor='middle',
-#         width=0.9, marker={'color':n_frame['one']['color_code']})
-#     ],
-#     layout=go.Layout(
-#         xaxis=dict(range=[0, 60], autorange=False, title=dict(text='Share (in percent)',font=dict(size=18))),
-#         yaxis=dict(range=[-0.5, 5.5], autorange=False,tickfont=dict(size=14)),
-#         title=dict(text='Figure B3: Share (in percent) of Disbursement by Sector for Year: 1980',font=dict(size=28),x=0.5,xanchor='center'),
-#         # Add button
-#         updatemenus=[dict(type="buttons",
-#           buttons=[dict(label="Play",
-#             method="animate",
-#             args=[None,{"frame": {"duration": 1000, "redraw": True}, "fromcurrent": True}]),
-#           dict(label="Stop",
-#             method="animate",
-#             args=[[None],{"frame": {"duration": 0, "redraw": False}, 
-#             "mode": "immediate","transition": {"duration": 0}}])])]
-#     ),
-
-#     frames=[
-#             go.Frame(
-#                 data=[
-#                         go.Bar(x=value['share'], y=value['Sectors'],
-#                         orientation='h',text=value['share'],
-#                         marker={'color':value['color_code']})
-#                     ],
-#                 layout=go.Layout(
-#                         xaxis=dict(range=[0, 60], autorange=False),
-#                         yaxis=dict(range=[-0.5, 5.5], autorange=False,tickfont=dict(size=14)),
-#                         title=dict(text='Figure B3: Share (in percent) of Disbursement by Sector for Year: '+str(value['year'].values[0]),
-#                         font=dict(size=28))
-#                     )
-#             )
-#         for key, value in n_frame.items()
-#     ]
-# )
-
-
 dropdown = dbc.Card([
      dcc.Dropdown(
         id='id_reserves',
         options=[{'label': i, 'value': i} for i in categories],
         multi = True,
-        value=categories),
+        value=['Reserve Money']),
   ],body=True)
    
 
@@ -184,19 +121,6 @@ growth =dbc.Card([
   )
       
 
-# racing = dbc.Card([
-#   dcc.Graph(
-#         id='id_racing',
-#         figure=fig,
-#         config={'displaylogo': False}
-#     ),
-
-#     html.Small("Source: National Bank of Ethiopia"),       
-       
-#     ], 
-#   body=True,
-#  )
- 
 
 app.layout = html.Div([
   html.Br(),

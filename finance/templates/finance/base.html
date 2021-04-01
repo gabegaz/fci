@@ -32,21 +32,23 @@
 <body>
 
 
-<!--py-0-->
+ 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light py-0" style="background-color: #e3f2fd;">
-
+  
   <a class="navbar-brand font-weight-bold" href="{% url 'dashboard' %}">Dashboard</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item dropdown font-weight-bold">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Money Supply
+           Money
         </a>
+
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{% url 'money_supply' %}">Money supply</a>
@@ -58,9 +60,10 @@
 
       </li>
 
+
       <li class="nav-item dropdown font-weight-bold">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Financial Intermediation
+          Banking
         </a>
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -76,95 +79,22 @@
           <a class="dropdown-item" href="{% url 'loan_collection_sector' %}">Loan Outstanding-banks</a>
           <a class="dropdown-item" href="{% url 'loan_outstanding_client' %}">Loan Outstanding-client</a>
           <a class="dropdown-item" href="{% url 'loan_outstanding_sector' %}">Loan Outstanding-sector</a>
-          
-        </div>
-      </li>
 
      
-      <!-- <li class="nav-item dropdown font-weight-bold">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Insurances
-        </a>
-
-
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Balance of payments</a>
-
-          <div class="dropdown-divider"></div>
-
-          <a class="dropdown-item" href="#">Exports by commodity</a>
-          <a class="dropdown-item" href="#">Exports by destination</a>
-          <div class="dropdown-divider"></div>
-
-          <a class="dropdown-item" href="#">Imports by commodity</a>
-          <a class="dropdown-item" href="#">Imports by end use</a>
-          <a class="dropdown-item" href="#">Imports by origin</a>
-          <div class="dropdown-divider"></div>
-
         </div>
       </li>
-
-      <li class="nav-item dropdown font-weight-bold">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          MFIs
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Population by region</a>
-        </div>
-      </li>
-
-
-      <li class="nav-item dropdown font-weight-bold">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Financial markets
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Poverty head count</a>
-          <a class="dropdown-item" href="#">Poverty gap</a>
-          <a class="dropdown-item" href="#">Poverty Severity</a>
-
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Inequality-Gini Coefficient</a>
-        </div>
-      </li>
-
-       <li class="nav-item dropdown font-weight-bold">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Price level and inflation
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">CPI Annual</a>
-          <a class="dropdown-item" href="#">CPI Monthly</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Annual Inflation</a>
-          <a class="dropdown-item" href="#">Monthly Inflation</a>
-        </div>
-      </li>
-
-      <li class="nav-item dropdown font-weight-bold">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Rates
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Capital expenditure</a>
-          <a class="dropdown-item" href="#">Recurrent expenditure</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Tax revenue</a>
-          <a class="dropdown-item" href="#">Non-tax revenue</a>
-        </div>
-      </li>
- -->
 
     </ul>
-
 
   </div>
 
 </nav>
+
+
+
+
+
+
 
   {% block content %}
      
