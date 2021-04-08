@@ -64,10 +64,10 @@ cols = [i for i in df_level.columns]
 
 
 df_level = pd.melt(df_level, id_vars=cols[0], value_vars=cols[1:],
-                    var_name='Monetary Aggregates', value_name='level_alues')
+                    var_name='Monetary Aggregates', value_name='level_values')
 
 df_share = pd.melt(df_share, id_vars=cols[0], value_vars=cols[1:],
-                    var_name='Monetary Aggregates', value_name='share_alues')
+                    var_name='Monetary Aggregates', value_name='share_values')
 
 df_growth = pd.melt(df_growth, id_vars=cols[0], value_vars=cols[1:],
                     var_name='Monetary Aggregates', value_name='growth_values')
@@ -149,7 +149,7 @@ def level(level, share, growth):
     if len(level) > 0:
     	dff_level = df_level[df_level['Monetary Aggregates'].isin(level)]
     	fig = px.area(dff_level, x= 'year',
-    		y = 'Values',
+    		y = 'level_values',
     		color = 'Monetary Aggregates',
     		title = "Figure #0: Monetary Aggregates",
     		labels={
@@ -162,7 +162,7 @@ def level(level, share, growth):
     elif len(share) > 0:
     	dff_share = df_share[df_share['Monetary Aggregates'].isin(share)]
     	fig = px.line(dff_share, x= 'year',
-    		y = 'Values',
+    		y = 'share_values',
     		color = 'Monetary Aggregates',
     		title = "Figure #0: MAMonetary Aggregates",
     		labels={
@@ -175,7 +175,7 @@ def level(level, share, growth):
     else:
     	dff_growth = df_growth[df_growth['Monetary Aggregates'].isin(growth)]
     	fig = px.line(dff_growth, x= 'year',
-    		y = 'Values',
+    		y = 'growth_values',
     		color = 'Monetary Aggregates',
     		title = "Figure #0: Monetary Aggregates",
     		labels={
